@@ -1,5 +1,6 @@
 # Nginx and microservices
-Este repositorio tiene un docker compose que levanta un docker para un nginx y cuatro dockers con sus apis rest.
+This repository has a docker compose that raises a docker for an nginx and four dockers with their rest apis.
+
 ![Alt text](image.png)
 
 ## Docker compose
