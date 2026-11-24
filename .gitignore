@@ -1,7 +1,5 @@
 .env
-.bin
-.obj
-/ApiOne/.vscode
-/ApiTwo/.vscode
-/ApiThree/.vscode
-/ApiFour/.vscode
+bin/
+obj/
+.vs/
+.vscode/

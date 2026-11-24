@@ -25,7 +25,11 @@ namespace ApiTwo
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiTwo", Version = "v1" });
             });
 
-            services.AddCors();
+            services.AddHttpClient();
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().WithMethods("GET"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,14 +46,14 @@ namespace ApiTwo
 
             app.UseRouting();
 
+            app.UseCors();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
-            app.UseCors();
         }
     }
 }
