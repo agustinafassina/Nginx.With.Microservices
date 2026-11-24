@@ -1,38 +1,16 @@
-# ApiJobOpportunity
-This is a repository about a job search with .net core 3.1.
-The service consumes an external service, sends subscriptions for registered users and saves the data in memory.
-##
+# ApiOne
 
-Endpoints:
-https://localhost:5001/api/v1/JobOpportunity/suscriptions - POST
-Add user:
-```
-{
-	"id": 6,
-	"username": "other",
-	"email": "agusfas_5@hotmail.com",
-	"InterestPositionsName": "Database Analyst"
-}
-```
-https://localhost:5001/api/v1/JobOpportunity/suscriptions/user - GET
+Returns 3 random dog images.
 
-https://localhost:5001/api/v1/JobOpportunity - POST
+- **Endpoint:** `GET /api/v1/pets`
+- **External API:** [Dog CEO](https://dog.ceo/dog-api/)
 
-Add opportunity:
-```
-{
-	"id": 1,
-	"name": "Database Analyst",
-	"country": "Argentina",
-	"salary": 1545
-}
-```
+## Run
 
-https://localhost:5001/api/v1/JobOpportunity?name=Database Analyst - GET with filters.
-
-To run the project:
-```
+```bash
 dotnet run
 ```
 
-	
+Then open `https://localhost:5001/swagger` or call `https://localhost:5001/api/v1/pets`.
+
+To run it with Docker together with the other services, see the [main README](../README.md).
